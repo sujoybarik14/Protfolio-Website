@@ -449,11 +449,11 @@ const Portfolio = () => {
 
       {/* Contact */}
       <AnimatedSection id="contact" className="py-24 px-4 bg-[#0d0d22]/50">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <SectionHeading>
             Get In <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
           </SectionHeading>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { href: "tel:9064409304", icon: Phone, label: "Phone", value: "9064409304", grad: "from-blue-600 to-cyan-500", shadow: "shadow-blue-500/20", hover: "group-hover:text-blue-400" },
               { href: "mailto:sujoybarik924@gmail.com", icon: Mail, label: "Email", value: "sujoybarik924@gmail.com", grad: "from-purple-600 to-pink-500", shadow: "shadow-purple-500/20", hover: "group-hover:text-purple-400" },
