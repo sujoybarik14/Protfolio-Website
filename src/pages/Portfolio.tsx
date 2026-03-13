@@ -8,6 +8,29 @@ import {
 } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpeg";
 
+// Typewriter hook
+const useTypewriter = (text: string, speed: number = 100) => {
+  const [displayText, setDisplayText] = useState("");
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index < text.length) {
+        setDisplayText(text.slice(0, index + 1));
+        index++;
+      } else {
+        setIsComplete(true);
+        clearInterval(timer);
+      }
+    }, speed);
+
+    return () => clearInterval(timer);
+  }, [text, speed]);
+
+  return { displayText, isComplete };
+};
+
 const NAV_ITEMS = ["Home", "About", "Skills", "Internship", "Projects", "Education", "Contact"];
 
 const SKILLS_CATEGORIES = [
@@ -146,6 +169,8 @@ const Portfolio = () => {
     setMobileMenuOpen(false);
   };
 
+  const { displayText } = useTypewriter("Sujoy Barik", 120);
+
   return (
     <div className="min-h-screen bg-[#0a0a1a] text-gray-100 font-sans overflow-x-hidden">
       {/* Navbar */}
@@ -220,13 +245,14 @@ const Portfolio = () => {
           >
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Sujoy Barik
+              {displayText}
+              <span className="animate-pulse text-cyan-400">|</span>
             </span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
+            transition={{ delay: 1.2, duration: 0.6 }}
             className="text-lg sm:text-xl text-gray-400 mb-6 max-w-xl mx-auto leading-relaxed"
           >
             Computer Science Student &bull; AI & ML Enthusiast &bull; Software Developer
@@ -234,7 +260,7 @@ const Portfolio = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.65, duration: 0.6 }}
+            transition={{ delay: 1.5, duration: 0.6 }}
             className="text-base text-gray-500 mb-10 max-w-lg mx-auto leading-relaxed"
           >
             Hello! I am a passionate Computer Science student with skills in Java, Python, SQL, and C. I enjoy building projects related to AI, ML, and software development.
@@ -242,7 +268,7 @@ const Portfolio = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
+            transition={{ delay: 1.8, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button onClick={() => scrollTo("Projects")} className="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-0.5">
