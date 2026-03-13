@@ -457,10 +457,13 @@ const Portfolio = () => {
             {[
               { href: "tel:9064409304", icon: Phone, label: "Phone", value: "9064409304", grad: "from-blue-600 to-cyan-500", shadow: "shadow-blue-500/20", hover: "group-hover:text-blue-400" },
               { href: "mailto:sujoybarik924@gmail.com", icon: Mail, label: "Email", value: "sujoybarik924@gmail.com", grad: "from-purple-600 to-pink-500", shadow: "shadow-purple-500/20", hover: "group-hover:text-purple-400" },
+              { href: "https://www.linkedin.com/in/sujoybarik", icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/sujoybarik", grad: "from-blue-700 to-blue-500", shadow: "shadow-blue-700/20", hover: "group-hover:text-blue-400" },
             ].map((c) => (
               <motion.a
                 key={c.label}
                 href={c.href}
+                target={c.href.startsWith("http") ? "_blank" : undefined}
+                rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 whileHover={{ scale: 1.03, y: -4 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="group bg-[#11112a]/80 border border-white/5 rounded-2xl p-8 flex items-center gap-5 hover:border-blue-500/30 hover:shadow-xl hover:shadow-blue-900/10 transition-colors"
