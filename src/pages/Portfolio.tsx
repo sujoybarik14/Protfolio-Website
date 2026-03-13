@@ -245,7 +245,8 @@ const Portfolio = () => {
           >
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Sujoy Barik
+              {displayText}
+              <span className="animate-pulse text-cyan-400">|</span>
             </span>
           </motion.h1>
           <motion.p
