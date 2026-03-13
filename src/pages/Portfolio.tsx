@@ -4,8 +4,9 @@ import { useRef } from "react";
 import {
   Mail, Phone, Code, Brain, Database, Cpu, BookOpen, Monitor,
   ChevronDown, GraduationCap, Briefcase, Github, Terminal,
-  BarChart3, Bot, Layers
+  BarChart3, Bot, Layers, Download
 } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const NAV_ITEMS = ["Home", "About", "Skills", "Internship", "Projects", "Education", "Contact"];
 
@@ -207,9 +208,9 @@ const Portfolio = () => {
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-            className="w-28 h-28 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-4xl font-bold text-white shadow-2xl shadow-blue-500/30"
+            className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 p-[3px] shadow-2xl shadow-blue-500/30"
           >
-            SB
+            <img src={profilePhoto} alt="Sujoy Barik" className="w-full h-full rounded-full object-cover" />
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -250,6 +251,9 @@ const Portfolio = () => {
             <button onClick={() => scrollTo("Contact")} className="px-8 py-3.5 border border-gray-700 text-gray-300 rounded-xl font-semibold hover:bg-white/5 hover:border-gray-500 transition-all hover:-translate-y-0.5">
               Contact Me
             </button>
+            <a href="/resume.pdf" download className="px-8 py-3.5 bg-white/5 border border-gray-700 text-gray-300 rounded-xl font-semibold hover:bg-white/10 hover:border-gray-500 transition-all hover:-translate-y-0.5 inline-flex items-center gap-2 justify-center">
+              <Download className="w-4 h-4" /> Resume
+            </a>
           </motion.div>
           <motion.button
             initial={{ opacity: 0 }}
