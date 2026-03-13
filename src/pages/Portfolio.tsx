@@ -208,9 +208,9 @@ const Portfolio = () => {
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-            className="w-28 h-28 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-4xl font-bold text-white shadow-2xl shadow-blue-500/30"
+            className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 p-[3px] shadow-2xl shadow-blue-500/30"
           >
-            SB
+            <img src={profilePhoto} alt="Sujoy Barik" className="w-full h-full rounded-full object-cover" />
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
