@@ -169,6 +169,8 @@ const Portfolio = () => {
     setMobileMenuOpen(false);
   };
 
+  const { displayText } = useTypewriter("Sujoy Barik", 120);
+
   return (
     <div className="min-h-screen bg-[#0a0a1a] text-gray-100 font-sans overflow-x-hidden">
       {/* Navbar */}
