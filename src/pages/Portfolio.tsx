@@ -4,8 +4,9 @@ import { useRef } from "react";
 import {
   Mail, Phone, Code, Brain, Database, Cpu, BookOpen, Monitor,
   ChevronDown, GraduationCap, Briefcase, Github, Terminal,
-  BarChart3, Bot, Layers
+  BarChart3, Bot, Layers, Download
 } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const NAV_ITEMS = ["Home", "About", "Skills", "Internship", "Projects", "Education", "Contact"];
 
