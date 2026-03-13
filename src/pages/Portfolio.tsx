@@ -4,7 +4,7 @@ import { useRef } from "react";
 import {
   Mail, Phone, Code, Brain, Database, Cpu, BookOpen, Monitor,
   ChevronDown, GraduationCap, Briefcase, Github, Terminal,
-  BarChart3, Bot, Layers, Download
+  BarChart3, Bot, Layers, Download, Linkedin
 } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpeg";
 
