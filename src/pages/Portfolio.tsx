@@ -251,6 +251,9 @@ const Portfolio = () => {
             <button onClick={() => scrollTo("Contact")} className="px-8 py-3.5 border border-gray-700 text-gray-300 rounded-xl font-semibold hover:bg-white/5 hover:border-gray-500 transition-all hover:-translate-y-0.5">
               Contact Me
             </button>
+            <a href="/resume.pdf" download className="px-8 py-3.5 bg-white/5 border border-gray-700 text-gray-300 rounded-xl font-semibold hover:bg-white/10 hover:border-gray-500 transition-all hover:-translate-y-0.5 inline-flex items-center gap-2 justify-center">
+              <Download className="w-4 h-4" /> Resume
+            </a>
           </motion.div>
           <motion.button
             initial={{ opacity: 0 }}
